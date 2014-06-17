@@ -31,7 +31,7 @@ for t in range(times):
 	
 	#updating beliefs
 	x0 =  (a1 + x0*(t+1))/(t+2)
-	x1 =  (a1 + x1*(t+1))/(t+2)
+	x1 =  (a0 + x1*(t+1))/(t+2)
 
 plt.plot(x0_values, 'b-', label = 'x_0(t)')
 plt.plot(x1_values, 'r-',  label = 'x_1(t)')
