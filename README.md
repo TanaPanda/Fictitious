@@ -8,3 +8,4 @@ Matching Pennies ゲーム
 
 <img src="fictitious1.png" alt="fictitious1" width="120"/>
 
+<img src="fictitious_hist0.png" alt="fictitious_hist" width="120"/>
