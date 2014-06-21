@@ -5,6 +5,9 @@ times = 100  # number of cycles
 profits = [[1,-1], [-1, 1], [-1,1], [1, -1]] # matrix of profits
 x0 = random.uniform(0, 1) # the beginning belief of player0
 x1 = random.uniform(0, 1) # the beginning belief of player1
+num = 1  #saving png/pdf images with the name “fictitious[num].png/pdf”
+#if num = None, images won’t be saved
+
 
 x0_values = []
 x1_values = []
@@ -36,4 +39,9 @@ for t in range(times):
 plt.plot(x0_values, 'b-', label = 'x_0(t)')
 plt.plot(x1_values, 'r-',  label = 'x_1(t)')
 plt.legend()
+
+if num != None:
+    plt.savefig('fictitious' + str(num) + '.png')
+    plt.savefig('fictitious' + str(num) + '.pdf')
+
 plt.show()
