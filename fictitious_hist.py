@@ -39,14 +39,13 @@ for t in range(times):
 		else :
 			a1 = random.choice([0,1])
 		
-		if c< cycles - 1:
+		if c< cycles :
 			#updating beliefs
 			x0 =  (a1 + x0*(t+1))/(t+2)
 			x1 =  (a0 + x1*(t+1))/(t+2)
-
-        last_x0_values.append(x0)
-        last_x1_values.append(x1)
 	
+	last_x0_values.append(x0)
+	last_x1_values.append(x1)
 
 for i, j in enumerate([last_x0_values, last_x1_values]) :
     plt.subplot(2, 1, i+1)
