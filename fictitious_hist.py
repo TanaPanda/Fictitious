@@ -9,11 +9,7 @@ x1 = random.uniform(0, 1) # the beginning belief of player1
 num = 0  #saving png/pdf images with the name “fictitious_hist[num].png/pdf”
 #if num = None, images won’t be saved
 
-
-
 last_x0_values = []
-last_x1_values = []
-
 
 for t in range(times):
 	x0_values = []
@@ -45,12 +41,13 @@ for t in range(times):
 			x1 =  (a0 + x1*(t+1))/(t+2)
 	
 	last_x0_values.append(x0)
-	last_x1_values.append(x1)
 
-for i, j in enumerate([last_x0_values, last_x1_values]) :
-    plt.subplot(2, 1, i+1)
-    plt.hist(j, bins=50, label='x_'+str(i)+'(T-1)')
-    plt.legend()
+
+plt.subplot()
+plt.hist(last_x0_values, facecolor='b', label='x_0(T-1)')
+plt.xlim(0, 1)
+plt.ylim(0, 100)
+plt.legend()
 	
 if num != None:
     plt.savefig('fictitious_hist' + str(num) + '.png')
